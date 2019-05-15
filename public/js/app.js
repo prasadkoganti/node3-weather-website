@@ -5,7 +5,9 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const location = searchElement.value;
     //console.log(location);
-    url = 'http://localhost:3000/weather?address='+location;
+    //url = 'http://localhost:3000/weather?address='+location;
+
+    url = '/weather?address=' + location;
 
     document.getElementById('dispWeather').innerHTML='Loading..';
     document.getElementById('dispError').innerHTML='';
