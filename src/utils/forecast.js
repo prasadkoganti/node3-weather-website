@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Could not fetch forecast for given coordinates. Try again', undefined);
         } else {
-            callback(undefined, body.daily.summary + ' ' +
+            callback(undefined, body.daily.summary + '\n' +
                 'Temperature out there is ' +
                 body.currently.temperature +
                 ' celcius. There is ' + body.currently.precipProbability + '% chance of rain'
