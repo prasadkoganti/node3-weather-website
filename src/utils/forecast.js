@@ -10,9 +10,9 @@ const forecast = (latitude, longitude, callback) => {
             callback('Could not fetch forecast for given coordinates. Try again', undefined);
         } else {
             callback(undefined, body.daily.summary + ' ' +
-                'It is currently ' +
+                'Temperature out there is ' +
                 body.currently.temperature +
-                ' celcius out there. There is ' + body.currently.precipProbability + '% chance of rain'
+                ' celcius. There is ' + body.currently.precipProbability + '% chance of rain'
             );
         }
     })
